@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build:
+      context: ./auth_service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - JWT_SECRET=your-secret-key
+      - DB_CONNECTION=test.db

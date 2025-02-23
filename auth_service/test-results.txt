@@ -1,0 +1,55 @@
+go: downloading gorm.io/gorm v1.25.12
+go: downloading github.com/gin-gonic/gin v1.10.0
+go: downloading gorm.io/driver/sqlite v1.5.7
+go: downloading github.com/golang-jwt/jwt/v5 v5.2.1
+go: downloading golang.org/x/crypto v0.34.0
+go: downloading github.com/stretchr/testify v1.9.0
+go: downloading github.com/joho/godotenv v1.5.1
+go: downloading github.com/mattn/go-sqlite3 v1.14.22
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading gopkg.in/yaml.v3 v3.0.1
+go: downloading github.com/gin-contrib/sse v0.1.0
+go: downloading github.com/mattn/go-isatty v0.0.20
+go: downloading golang.org/x/net v0.25.0
+go: downloading github.com/jinzhu/now v1.1.5
+go: downloading github.com/jinzhu/inflection v1.0.0
+go: downloading golang.org/x/text v0.22.0
+go: downloading github.com/go-playground/validator/v10 v10.20.0
+go: downloading github.com/ugorji/go/codec v1.2.12
+go: downloading github.com/pelletier/go-toml/v2 v2.2.2
+go: downloading google.golang.org/protobuf v1.34.1
+go: downloading golang.org/x/sys v0.30.0
+go: downloading github.com/gabriel-vasile/mimetype v1.4.3
+go: downloading github.com/go-playground/universal-translator v0.18.1
+go: downloading github.com/leodido/go-urn v1.4.0
+go: downloading github.com/go-playground/locales v0.14.1
+?   	auth_service	[no test files]
+?   	auth_service/config	[no test files]
+?   	auth_service/database	[no test files]
+?   	auth_service/models	[no test files]
+?   	auth_service/services	[no test files]
+=== RUN   TestRegisterRoute
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/register            --> auth_service/routes.AuthRoutes.func1 (3 handlers)
+[GIN-debug] POST   /auth/login               --> auth_service/routes.AuthRoutes.func2 (3 handlers)
+[GIN] 2025/02/23 - 18:15:25 | 201 |     144.411µs |                 | POST     "/auth/register"
+--- PASS: TestRegisterRoute (0.00s)
+=== RUN   TestLoginRoute
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] POST   /auth/register            --> auth_service/routes.AuthRoutes.func1 (3 handlers)
+[GIN-debug] POST   /auth/login               --> auth_service/routes.AuthRoutes.func2 (3 handlers)
+[GIN] 2025/02/23 - 18:15:25 | 200 |      34.237µs |                 | POST     "/auth/login"
+--- PASS: TestLoginRoute (0.00s)
+PASS
+ok  	auth_service/routes	0.038s
